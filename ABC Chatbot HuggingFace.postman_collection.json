@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "64d20025-41d6-45ad-b935-58c51235d97b",
+		"name": "ABC Chatbot HuggingFace",
+		"description": "Built using Postman + HuggingFace Zephyr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44098426",
+		"_collection_link": "https://www.postman.com/kavya-8644422/workspace/bb4b13e9-9c4a-4689-84c8-621459383819/collection/44098426-64d20025-41d6-45ad-b935-58c51235d97b?action=share&source=collection_link&creator=44098426"
+	},
+	"item": [
+		{
+			"name": "Product Info",
+			"item": [
+				{
+					"name": "Solar-Powered Street Light",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"inputs\": \"You are a helpful assistant at ABC Lighting Corp. Tell the user about your solar-powered street light. End with 'Is there anything else I can help you with?'\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.7,\r\n    \"max_new_tokens\": 150\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solar-Powered Driveway Light",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"inputs\": \"You are a helpful assistant at ABC Lighting Corp. Describe the features of the solar-powered driveway light. End with 'Is there anything else I can help you with?'\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.7,\r\n    \"max_new_tokens\": 150\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solar-Powered Wall Light",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inputs\": \"You are a helpful assistant at ABC Lighting Corp. Describe your solar-powered wall light, its battery life, and mounting style. End with 'Is there anything else I can help you with?'\",\r\n    \"parameters\": {\r\n        \"temperature\": 0.7,\r\n        \"max_new_tokens\": 150\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "📸 Image - Solar Street Light",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"inputs\": \"Sure! Here's the image of our solar-powered street light: https://kenbrooksolar.com/wp-content/uploads/Kenbrook-Solar-18w-solar-street-light.jpg\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.5,\r\n    \"max_new_tokens\": 60\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "📸 Image - Solar Driveway Light",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var template = `\r",
+									"<canvas id=\"myChart\" height=\"75\"></canvas>\r",
+									"\r",
+									"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js\"></script> \r",
+									"\r",
+									"<script>\r",
+									"    var ctx = document.getElementById(\"myChart\");\r",
+									"\r",
+									"    var myChart = new Chart(ctx, {\r",
+									"        type: \"pie\",\r",
+									"        data: {\r",
+									"            labels: [],\r",
+									"            datasets: [{\r",
+									"                data: [],\r",
+									"                \r",
+									"                // Change these colours to customize the chart\r",
+									"                backgroundColor: [\"#003f5c\", \"#58508d\", \"#bc5090\", \"#ff6361\", \"#ffa600\"],\r",
+									"            }]\r",
+									"        },\r",
+									"        options: {\r",
+									"            title: {\r",
+									"                display: true,\r",
+									"                text: 'Generated Text'\r",
+									"            }\r",
+									"        }\r",
+									"    });\r",
+									"\r",
+									"    // Access the data passed to pm.visualizer.set() from the JavaScript\r",
+									"    // code of the Visualizer template\r",
+									"    pm.getData(function (err, value) {\r",
+									"        myChart.data.datasets[0].data = value.response.map(item => item.generated_text.length);\r",
+									"        myChart.data.labels = value.response.map((item, index) => 'Text ' + (index + 1));\r",
+									"        myChart.update();\r",
+									"    });\r",
+									"\r",
+									"</script>`;\r",
+									"function constructVisualizerPayload() {\r",
+									"    return { response: pm.response.json() }\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"inputs\": \"The user asks: Can I see a photo of your driveway light? Reply with: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlCkEzjp9m2iSiG7G8TiTFI05SpO8zKl3PvQ&s\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.5,\r\n    \"max_new_tokens\": 60\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image - Solar Wall Light",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"inputs\": \"The user wants to see your wall light. Respond with: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1vfUi2MsXp3IRDdLQMeCemX_DIwSxo7tiIQ&s\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.5,\r\n    \"max_new_tokens\": 60\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact Handling",
+			"item": [
+				{
+					"name": "CONTACT COLLECTION",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{vault:hugging-face-user-access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"inputs\": \"The user says: 'No, thank you.' Politely ask for their name and contact number so your team can follow up.\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.5,\r\n    \"max_new_tokens\": 50\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+							"protocol": "https",
+							"host": [
+								"api-inference",
+								"huggingface",
+								"co"
+							],
+							"path": [
+								"models",
+								"HuggingFaceH4",
+								"zephyr-7b-beta\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zephyr Chat Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Generated Text</th>\r",
+							"    </tr>\r",
+							"    \r",
+							"    {{#each response}}\r",
+							"        <tr>\r",
+							"            <td>{{generated_text}}</td>\r",
+							"        </tr>\r",
+							"    {{/each}}\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{vault:hugging-face-user-access-token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"inputs\": \"You are a helpful customer support assistant for ABC Lighting Corp. Tell me about your solar-powered driveway light.\",\r\n  \"parameters\": {\r\n    \"temperature\": 0.7,\r\n    \"max_new_tokens\": 150\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta\n",
+					"protocol": "https",
+					"host": [
+						"api-inference",
+						"huggingface",
+						"co"
+					],
+					"path": [
+						"models",
+						"HuggingFaceH4",
+						"zephyr-7b-beta\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
